@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'CursobsKpai.ui'
+## Form generated from reading UI file 'AlunoYoABzO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.0
 ##
@@ -15,44 +15,19 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QHeaderView,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QHeaderView, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QTableWidget, QTableWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(550, 592)
-        self.tableWidget = QTableWidget(Form)
-        if (self.tableWidget.columnCount() < 3):
-            self.tableWidget.setColumnCount(3)
-        font = QFont()
-        font.setFamilies([u"Impact"])
-        font.setPointSize(12)
-        __qtablewidgetitem = QTableWidgetItem()
-        __qtablewidgetitem.setFont(font);
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        __qtablewidgetitem1.setFont(font);
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        __qtablewidgetitem2.setFont(font);
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(40, 270, 471, 251))
-        self.tableWidget.setFrameShape(QFrame.Shape.NoFrame)
-        self.tableWidget.setFrameShadow(QFrame.Shadow.Sunken)
-        self.tableWidget.setAlternatingRowColors(True)
-        self.tableWidget.setGridStyle(Qt.PenStyle.SolidLine)
-        self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget.horizontalHeader().setProperty(u"showSortIndicator", False)
-        self.tableWidget.horizontalHeader().setStretchLastSection(True)
-        self.tableWidget.verticalHeader().setProperty(u"showSortIndicator", False)
-        self.tableWidget.verticalHeader().setStretchLastSection(False)
+        Form.resize(561, 595)
         self.frame = QFrame(Form)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(30, 30, 438, 200))
+        self.frame.setGeometry(QRect(30, 40, 501, 200))
         self.frame.setMinimumSize(QSize(0, 200))
         self.frame.setMaximumSize(QSize(16777215, 200))
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
@@ -86,6 +61,27 @@ class Ui_Form(object):
 
         self.verticalLayout.addWidget(self.frame_2)
 
+        self.frame_6 = QFrame(self.frame_4)
+        self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_4 = QHBoxLayout(self.frame_6)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.label_3 = QLabel(self.frame_6)
+        self.label_3.setObjectName(u"label_3")
+
+        self.horizontalLayout_4.addWidget(self.label_3)
+
+        self.edtEmail = QLineEdit(self.frame_6)
+        self.edtEmail.setObjectName(u"edtEmail")
+        self.edtEmail.setStyleSheet(u"background-color: rgb(252, 255, 199);\n"
+"color: rgb(0, 0, 0);")
+
+        self.horizontalLayout_4.addWidget(self.edtEmail)
+
+
+        self.verticalLayout.addWidget(self.frame_6)
+
         self.frame_3 = QFrame(self.frame_4)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
@@ -97,12 +93,10 @@ class Ui_Form(object):
 
         self.horizontalLayout_2.addWidget(self.label_2)
 
-        self.ednCH = QLineEdit(self.frame_3)
-        self.ednCH.setObjectName(u"ednCH")
-        self.ednCH.setStyleSheet(u"background-color: rgb(252, 255, 199);\n"
-"color: rgb(0, 0, 0);")
+        self.CbCurso = QComboBox(self.frame_3)
+        self.CbCurso.setObjectName(u"CbCurso")
 
-        self.horizontalLayout_2.addWidget(self.ednCH)
+        self.horizontalLayout_2.addWidget(self.CbCurso)
 
 
         self.verticalLayout.addWidget(self.frame_3)
@@ -144,6 +138,38 @@ class Ui_Form(object):
 
         self.horizontalLayout_3.addWidget(self.frame_5)
 
+        self.tableWidget = QTableWidget(Form)
+        if (self.tableWidget.columnCount() < 4):
+            self.tableWidget.setColumnCount(4)
+        font = QFont()
+        font.setFamilies([u"Impact"])
+        font.setPointSize(12)
+        __qtablewidgetitem = QTableWidgetItem()
+        __qtablewidgetitem.setFont(font);
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        __qtablewidgetitem1.setFont(font);
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        font1 = QFont()
+        font1.setFamilies([u"Impact"])
+        font1.setPointSize(11)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        __qtablewidgetitem2.setFont(font1);
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        __qtablewidgetitem3.setFont(font);
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setGeometry(QRect(50, 270, 471, 251))
+        self.tableWidget.setFrameShape(QFrame.Shape.NoFrame)
+        self.tableWidget.setFrameShadow(QFrame.Shadow.Sunken)
+        self.tableWidget.setAlternatingRowColors(True)
+        self.tableWidget.setGridStyle(Qt.PenStyle.SolidLine)
+        self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget.horizontalHeader().setProperty(u"showSortIndicator", False)
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setProperty(u"showSortIndicator", False)
+        self.tableWidget.verticalHeader().setStretchLastSection(False)
 
         self.retranslateUi(Form)
 
@@ -151,17 +177,20 @@ class Ui_Form(object):
     # setupUi
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(QCoreApplication.translate("Form", u"Curso", None))
+        Form.setWindowTitle(QCoreApplication.translate("Form", u"Aluno", None))
+        self.label.setText(QCoreApplication.translate("Form", u"Nome", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"Email", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"<html><head/><body><p><span style=\" font-weight:700;\">Curso</span></p></body></html>", None))
+        self.btnInserir.setText(QCoreApplication.translate("Form", u"Inserir", None))
+        self.btnAlterar.setText(QCoreApplication.translate("Form", u"alterar", None))
+        self.btnExcluir.setText(QCoreApplication.translate("Form", u"Excluir", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"ID", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("Form", u"NOME", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"CH", None));
-        self.label.setText(QCoreApplication.translate("Form", u"Nome", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"<html><head/><body><p>CH</p></body></html>", None))
-        self.btnInserir.setText(QCoreApplication.translate("Form", u"Inserir", None))
-        self.btnAlterar.setText(QCoreApplication.translate("Form", u"alterar", None))
-        self.btnExcluir.setText(QCoreApplication.translate("Form", u"Excluir", None))
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"E-mail", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Curso", None));
     # retranslateUi
 

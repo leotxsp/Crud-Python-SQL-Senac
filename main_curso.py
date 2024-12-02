@@ -3,6 +3,9 @@ from PySide6 import QtWidgets
 from tela.ui_Curso import Ui_Form
 from SRC.Entities.Curso import Curso
 
+
+
+
 class Main(QtWidgets.QMainWindow, Ui_Form):
     def __init__(self):
         super(Main,self).__init__()
@@ -12,6 +15,9 @@ class Main(QtWidgets.QMainWindow, Ui_Form):
         self.btnInserir.clicked.connect(self.incluir)
         self.montarTabela()
         self.tableWidget.doubleClicked.connect(self.selecionar)
+        self.btnExcluir.clicked.connect(self.excluir)
+        self.btnAlterar.clicked.connect(self.alterar)
+        self.montarTabela()
     
     def incluir(self):
         try:
@@ -21,6 +27,7 @@ class Main(QtWidgets.QMainWindow, Ui_Form):
             curso.incluir()
             print(curso.buscar())
             print("incluido com sucesso")
+            self.limpar()
         except Exception as erro:
             print("Erro ao Inserir")
             print(erro)
@@ -30,6 +37,7 @@ class Main(QtWidgets.QMainWindow, Ui_Form):
             curso = Curso()
             self.lista = curso.buscar()
             print("busca realizada com sucesoo")
+            self.limpar()
         except Exception as erro:
             print("Erro ao Buscar")
             print(erro)
@@ -50,6 +58,30 @@ class Main(QtWidgets.QMainWindow, Ui_Form):
         self.cursoSelecionado = self.lista[item]
         self.edtNome.setText(str(self.cursoSelecionado.nome))
         self.ednCH.setText(str(self.cursoSelecionado.ch))
+        
+    def excluir(self):
+        try:
+            self.cursoSelecionado.excluir()
+            self.montarTabela()
+            self.limpar()
+        except Exception as erro:
+            print("Erro ao excluir")
+            print(erro)
+            
+    def alterar(self):
+        try:
+            self.cursoSelecionado.nome = self.edtNome.text()
+            self.cursoSelecionado.ch = int(self.ednCH.text())
+            self.cursoSelecionado.alterar()
+            self.montarTabela()
+            self.limpar()
+        except Exception as erro:
+            print("Erro ao excluir")
+            print(erro)
+            
+    def limpar(self):
+        self.edtNome.clear()
+        self.ednCH.clear()
 app = QtWidgets.QApplication(sys.argv)
 
 window = Main()

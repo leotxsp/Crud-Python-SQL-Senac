@@ -24,7 +24,7 @@ class Curso:
     def alterar(self):
         con = conectar()
         cursor = con.cursor()
-        sql = f'updete curso set nome = "{self.nome}", ch= {self.ch} where idcurso{self.idcurso}'
+        sql = f'update curso set nome = "{self.nome}", ch= {self.ch} where idCurso={self.idcurso}'
         cursor.execute(sql)
         con.commit()
         con.close()
@@ -41,3 +41,14 @@ class Curso:
             lista.append(curso)
         con.close()
         return lista
+
+    def buscarUM(self,idcurso):
+        con = conectar()
+        cursor = con.cursor()
+        sql = f'select from curso where idcurso = {idcurso}'
+        cursor.execute(sql)
+        resultado = cursor.fetchall()
+        item = resultado[0]
+        curso = Curso(item[0],item[1],item[2])
+        con.close()
+        return curso
