@@ -51,7 +51,7 @@ class Main(QtWidgets.QMainWindow, Ui_Form):
             print(curso)
             self.tableWidget.setItem(linha,0,QtWidgets.QTableWidgetItem(str(curso.idcurso)))
             self.tableWidget.setItem(linha,1,QtWidgets.QTableWidgetItem(str(curso.nome)))
-            self.tableWidget.setItem(linha,2,QtWidgets.QTableWidgetItem(str(curso.ch)))
+            self.tableWidget.setItem(linha,2,QtWidgets.QTableWidgetItem(str(curso.curso)))
             linha+=1
     def selecionar(self):
         item = self.tableWidget.currentRow()

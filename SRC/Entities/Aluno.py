@@ -26,7 +26,7 @@ class Aluno:
     def alterar(self):
         con = conectar()
         cursor = con.cursor()
-        sql = f'update aluno set nome = "{self.nome}", email= {self.email},Curso_idCurso = {self.curso.idcurso}  where idAluno={self.idAluno}'
+        sql = f'update aluno set nome = "{self.nome}", email= {self.email}, Curso_idCurso = {self.curso.idcurso}  where idAluno={self.idAluno}'
         cursor.execute(sql)
         con.commit()
         con.close()

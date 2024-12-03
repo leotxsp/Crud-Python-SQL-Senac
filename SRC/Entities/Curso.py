@@ -45,7 +45,7 @@ class Curso:
     def buscarUM(self,idcurso):
         con = conectar()
         cursor = con.cursor()
-        sql = f'select from curso where idcurso = {idcurso}'
+        sql = f'select * from curso where idcurso = {idcurso}'
         cursor.execute(sql)
         resultado = cursor.fetchall()
         item = resultado[0]
